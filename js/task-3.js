@@ -5,7 +5,7 @@ let span = document.getElementById("name-output")
 
 input.addEventListener('input', key => {
    if (key.target.value.trim().length > 0) {
-      span.textContent = key.target.value;
+      span.textContent = key.target.value.trim();
    } else {
       span.textContent = "Anonymous";
    }

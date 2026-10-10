@@ -27,6 +27,8 @@ const images = [
    }
 ];
 
+let fragment = document.createDocumentFragment();
+
 let gallery = document.querySelector('.gallery')
 gallery.style.display = 'flex'
 gallery.style.gap = '24px';
@@ -43,6 +45,8 @@ for (let key of images) {
    img.alt = key.alt;
    img.src = key.url;
    li.append(img);
-   gallery.append(li);
+   fragment.append(li);
 
 }
+
+gallery.append(fragment)
